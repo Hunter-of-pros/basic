@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.quizcontainer{
+    width: 420px;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.score{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: right;
+}
+
+.flag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* We don't need height here anymore */
+}
+
+.flag img {
+    /* 1. Limit the maximum size so it fits beautifully in your card */
+    max-width: 100%;
+    max-height: 200px; 
+    
+    /* 2. Let the width and height adjust automatically to the flag's true shape */
+    width: auto;
+    height: auto;
+    
+    /* 3. This ensures the border wraps cleanly around the exact image dimensions */
+    display: block; 
+    
+    border-radius: 12px;
+    border: 2px solid #333;
+    
+    /* Remove background-color entirely so there's no box color leaking out */
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.options button{
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2f2f2f;
+    color: white;
+    transition: 0.3s;
+}
+
+.options button:hover{
+    background-color: #444;
+    transform: scale(1.02);
+}
+
+.result{
+    min-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: lightgreen;
+}
